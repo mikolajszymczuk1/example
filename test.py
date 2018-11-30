@@ -14,3 +14,6 @@ while user_number != "end":
 
     except ValueError:
         print("\n\tZostała podana błędna wartość.\n")
+
+
+input("Naciśnij dowolnu klawisz aby zakończyć. : ")
