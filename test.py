@@ -40,5 +40,14 @@ def arithmetic_average(n_list):
     return sum(n_list) / len(n_list)
 
 
+def main():
+    """ Glowna funkcja obslugujaca cala aplikacje. """
+
+    welcome_msg("Program do obliczania średniej artmetycznej ;)")
+    user_list = create_numbers_list()
+    print("Średnia artmetyczna z listy liczb : {0} wynosi : {1}".format(user_list, arithmetic_average(user_list)))
+
+
 if __name__ == '__main__':
+    main()
     input("Naciśnij dowolnu klawisz aby zakończyć. : ")
