@@ -1,19 +1,28 @@
-print("\t\tProgram do obliczania średniej artmetycznej.\n\n")
+def welcome_msg(msg):
+    """ Funckja wyswitla komunikat wstepny/przywitalny. """
 
-numbers_list = []
+    print("\t\t", msg, "\n\n")
 
-user_number = None
-while user_number != "end":
-    user_number = input("Podaj liczbę lub wpisz 'end' aby zakończyć : ")
 
-    if user_number == "end":
-        print("Pobieranie liczb zakończone !")
+def create_numbers_list():
+    """ Funkcja Pobierajaca liste liczb od uzytkownika. """
 
-    try:
-        numbers_list.append(int(user_number))
+    numbers_list = []
 
-    except ValueError:
-        print("\n\tZostała podana błędna wartość.\n")
+    user_number = None
+    while user_number != "end":
+        user_number = input("Podaj liczbę lub wpisz 'end' aby zakończyć : ")
+
+        if user_number == "end":
+            print("Pobieranie liczb zakończone !")
+
+        try:
+            numbers_list.append(int(user_number))
+
+        except ValueError:
+            print("\n\tZostała podana błędna wartość.\n")
+
+    return numbers_list
 
 
 def arithmetic_average(n_list):
@@ -31,4 +40,5 @@ def arithmetic_average(n_list):
     return sum(n_list) / len(n_list)
 
 
-input("Naciśnij dowolnu klawisz aby zakończyć. : ")
+if __name__ == '__main__':
+    input("Naciśnij dowolnu klawisz aby zakończyć. : ")
