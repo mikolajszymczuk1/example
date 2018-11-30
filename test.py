@@ -16,4 +16,19 @@ while user_number != "end":
         print("\n\tZostała podana błędna wartość.\n")
 
 
+def arithmetic_average(n_list):
+    """ Funkcja zwraca średnia artmetyczna z list 'n_list'.
+
+    >>> l = [1, 2, 3]
+    >>> arithmetic_average(l)
+    2
+    >>> l.append(2)
+    >>> arithmetic_average(l)
+    2
+
+    """
+
+    return sum(n_list) / len(n_list)
+
+
 input("Naciśnij dowolnu klawisz aby zakończyć. : ")
